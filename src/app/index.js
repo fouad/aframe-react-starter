@@ -61,7 +61,7 @@ class StarterScene extends React.Component {
     const boxes = this.rings.map(this.generateRing.bind(this))
 
     // <VideoSphere
-    //       src={cdn(Math.random() < .5 ? 'https://ucarecdn.com/bcece0a8-86ce-460e-856b-40dac4875f15/' : '/assets/videos/overpass.mp4')}
+    //       src={cdn(Math.random() < .5 ? 'https://ucarecdn.com/bcece0a8-86ce-460e-856b-40dac4875f15/' : 'assets/videos/overpass.mp4')}
     //       muted={true}
     //       position="50 0 15"
     //       rotation="0 -90 0"/>
@@ -78,7 +78,7 @@ class StarterScene extends React.Component {
         <Light type="directional" intensity="1" position="0 0 -1"/>
 
         <CurvedImage
-          src={cdn('/assets/images/wikipage.png')}
+          src={cdn('assets/images/wikipage.png')}
           position="0 2 0"
           radius="5.7"
           thetaStart="30"
