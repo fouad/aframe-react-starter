@@ -22,6 +22,11 @@ if (IS_PRODUCTION && process.env.MKT_ENV !== 'dev') {
       }
     })
   )
+  PLUGINS.push(
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"production"'
+    })
+  )
 } else {
   PLUGINS.push(
     new BrowserSyncPlugin({
@@ -30,6 +35,11 @@ if (IS_PRODUCTION && process.env.MKT_ENV !== 'dev') {
       server: {
         baseDir: ['public', 'build'],
       }
+    })
+  )
+  PLUGINS.push(
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"development"'
     })
   )
 }
@@ -66,8 +76,7 @@ module.exports = {
     extensions: ['', '.js', '.json'],
     fallback: path.join(__dirname, 'node_modules'),
     modulesDirectories: [
-      'src/app',
-      'src/components',
+      'src',
       'node_modules',
     ]
   },

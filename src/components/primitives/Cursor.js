@@ -9,7 +9,7 @@ export class Cursor extends React.Component {
       radiusOuter: 0.016
     }
     const material = {
-      color: this.props.color,
+      color: this.props.color || '#42A5F5',
       shader: 'flat',
       opacity: this.props.opacity || 0.9,
       transparent: true
